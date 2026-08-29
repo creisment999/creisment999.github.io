@@ -8,8 +8,7 @@
 
 ## 发布到 GitHub Pages
 
-仓库名需要是：`creisment999.github.io`  
-（若现在叫 `crisment999.github.io`，到仓库 Settings → General 改名即可）
+仓库：`https://github.com/creisment999/creisment999.github.io`
 
 ### 1. 推送代码（若尚未推送）
 
