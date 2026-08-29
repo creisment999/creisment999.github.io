@@ -1,40 +1,40 @@
 ---
-title: '第一篇：如何用这个博客写笔记'
-description: '从新建 Markdown 到本地预览、推送到 GitHub Pages 的最短路径。'
+title: 'Getting started: how to write notes here'
+description: 'Shortest path from a new Markdown file to a live GitHub Pages post.'
 pubDate: 'Aug 29 2026'
 heroImage: '../../assets/blog-placeholder-1.jpg'
-tags: ['博客', '入门']
+tags: ['blog', 'getting-started']
 ---
 
-欢迎。这篇文章演示你以后写笔记的基本流程。
+Welcome. This post shows the basic workflow for writing notes on this site.
 
-## 新建一篇文章
+## Create a post
 
-在 `src/content/blog/` 下新建一个 `.md` 文件，例如 `ospf-lab-01.md`，头部写成：
+Add a `.md` file under `src/content/blog/`, for example `ospf-lab-01.md`:
 
 ```markdown
 ---
-title: 'OSPF 单区域实验笔记'
-description: 'GNS3 里搭一个单区域 OSPF，记录邻居建立与路由表。'
+title: 'OSPF single-area lab notes'
+description: 'Build a single-area OSPF topology in GNS3 and record neighbor state and routes.'
 pubDate: 'Aug 30 2026'
-tags: ['网络工程', 'OSPF']
+tags: ['networking', 'OSPF']
 ---
 
-正文从这里开始……
+Start writing here...
 ```
 
-文件名会变成文章 URL，例如：`/blog/ospf-lab-01/`。
+The filename becomes the URL, e.g. `/blog/ospf-lab-01/`.
 
-## 本地预览
+## Preview locally
 
 ```bash
 npm run dev
 ```
 
-浏览器打开终端提示的地址（一般是 `http://localhost:4321`），改完保存会自动刷新。
+Open the URL printed in the terminal (usually `http://localhost:4321`). Saves reload automatically.
 
-## 发布
+## Publish
 
-把改动提交并推送到 `main` 分支。GitHub Actions 会自动构建并部署到 GitHub Pages。
+Commit and push to `main`. GitHub Actions builds and deploys to GitHub Pages.
 
-写作建议：标题说清楚主题，正文写「目标 → 步骤 → 结果 → 踩坑」，代码块和命令尽量可复制。
+Writing tip: make the title specific, and structure the body as goal → steps → result → pitfalls. Keep commands copy-pasteable.

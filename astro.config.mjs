@@ -6,7 +6,6 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	// 部署到 https://creisment999.github.io
 	site: 'https://creisment999.github.io',
 	integrations: [mdx(), sitemap()],
 	fonts: [

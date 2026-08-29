@@ -1,14 +1,14 @@
 ---
-title: '用 Python 跑网络命令：subprocess 最小示例'
-description: '把 ping / traceroute 包进脚本，方便批量探测和记日志。'
+title: 'Running network commands with Python subprocess'
+description: 'Wrap ping / traceroute in a script for batch probing and logging.'
 pubDate: 'Aug 27 2026'
 heroImage: '../../assets/blog-placeholder-4.jpg'
-tags: ['编程', 'Python', '自动化']
+tags: ['programming', 'Python', 'automation']
 ---
 
-网络实验里经常要重复敲命令。把命令放进脚本，方便改参数、留日志。
+Network labs often mean typing the same commands again and again. Putting them in a script makes parameters and logs easier to manage.
 
-## 最小例子
+## Minimal example
 
 ```python
 import subprocess
@@ -28,10 +28,10 @@ if __name__ == '__main__':
     print(ping_host('8.8.8.8'))
 ```
 
-## 使用注意
+## Notes
 
-- Windows 上 `ping` 的参数是 `-n`，Linux/macOS 是 `-c`
-- 不要用字符串拼命令再 `shell=True`，优先传参数列表，减少注入风险
-- 生产环境探测建议加超时（`timeout=`）和并发上限，避免把自己打挂
+- On Windows, `ping` uses `-n`; on Linux/macOS it uses `-c`
+- Prefer an argument list over `shell=True` with a concatenated string — safer against injection
+- In production probes, add `timeout=` and a concurrency limit so you do not overload the network
 
-下一步可以做成「读主机列表 → 并行 ping → 输出 CSV」，当作小型巡检工具。
+Next step: read a host list → ping in parallel → write CSV, as a small health-check tool.
