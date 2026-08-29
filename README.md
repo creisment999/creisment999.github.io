@@ -2,22 +2,19 @@
 
 基于 [Astro](https://astro.build/) 官方 Blog 模板的简约技术博客，用于记录**网络工程**与**编程**学习内容。托管在 GitHub Pages，免费、纯静态。
 
-访问地址：`https://crisment999.github.io`
+访问地址：`https://creisment999.github.io`
 
 ---
 
 ## 发布到 GitHub Pages
 
-仓库：`https://github.com/crisment999/crisment999.github.io`
+仓库名需要是：`creisment999.github.io`  
+（若现在叫 `crisment999.github.io`，到仓库 Settings → General 改名即可）
 
 ### 1. 推送代码（若尚未推送）
 
 ```bash
-git init
-git add .
-git commit -m "init: astro tech blog"
-git branch -M main
-git remote add origin https://github.com/crisment999/crisment999.github.io.git
+git remote set-url origin git@github.com:creisment999/creisment999.github.io.git
 git push -u origin main
 ```
 
@@ -27,7 +24,7 @@ git push -u origin main
 
 1. **Source** 选 **GitHub Actions**
 2. 等待 Actions 里的 `Deploy to GitHub Pages` 跑完（绿色勾）
-3. 打开 `https://crisment999.github.io`
+3. 打开 `https://creisment999.github.io`
 
 若第一次部署失败，多半是 Pages 源还没切到 GitHub Actions，改完后重新跑一次 workflow 即可。
 
