@@ -1,0 +1,25 @@
+---
+import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="关于"
+	description="关于本站：网络工程与编程学习笔记"
+	pubDate={new Date('2026-08-29')}
+	heroImage={AboutHeroImage}
+>
+	<p>
+		这是一个托管在 GitHub Pages 上的个人技术博客，用来沉淀网络工程与编程相关的学习笔记。
+	</p>
+	<p>当前会覆盖这些方向：</p>
+	<ul>
+		<li><strong>网络工程</strong>：TCP/IP、路由交换、防火墙、抓包与排障</li>
+		<li><strong>编程</strong>：脚本自动化、运维工具、数据结构与算法练习</li>
+		<li><strong>实践复盘</strong>：实验拓扑、配置片段、问题定位过程</li>
+	</ul>
+	<p>
+		站点用 Astro 构建，内容全部是 Markdown。你看到的页面都是静态文件，没有数据库，也没有后端——改完文章 push 到 GitHub，就会自动重新部署。
+	</p>
+	<p>如果你也想搭一个类似的站，仓库里的 README 写了最简步骤。</p>
+</Layout>
