@@ -1,26 +1,36 @@
 # Tech Notes
 
-Personal blog for networking and programming notes. Live at https://creisment999.github.io
+Live site: https://creisment999.github.io
 
-## Write a post
+## Add a new post
 
-1. Create a Markdown file in `src/content/blog/`
-2. Add frontmatter, then write the body
-3. Preview locally with `npm run dev`
-4. Push to `main` — GitHub Actions deploys automatically
+1. Create a Markdown file in `src/content/blog/` (e.g. `my-topic.md`)
+2. Add frontmatter, then write the body:
 
 ```markdown
 ---
 title: 'Post title'
 description: 'One-line summary'
 pubDate: 'Aug 30 2026'
-tags: ['networking', 'OSPF']
+tags: ['networking']
 ---
 
 Your content here.
 ```
 
-The filename becomes the URL slug, e.g. `ospf-lab-01.md` → `/blog/ospf-lab-01/`.
+3. Preview: `npm run dev` → http://localhost:4321
+4. Publish: `git add` → `git commit` → `git push` to `main`
+
+The filename is the URL slug: `my-topic.md` → `/blog/my-topic/`.
+
+## Turn the website on / off
+
+Open: https://github.com/creisment999/creisment999.github.io/settings/pages
+
+| Action | What to do |
+| --- | --- |
+| **On** | Source → **GitHub Actions**. Wait for `Deploy to GitHub Pages` to succeed. |
+| **Off** | Change Source away from GitHub Actions, or use **Unpublish** if shown. |
 
 ## Commands
 
@@ -30,10 +40,3 @@ The filename becomes the URL slug, e.g. `ospf-lab-01.md` → `/blog/ospf-lab-01/
 | `npm run dev` | Local preview |
 | `npm run build` | Production build → `dist/` |
 | `npm run preview` | Preview the production build |
-
-If `npm install` is slow:
-
-```bash
-npm config set registry https://registry.npmmirror.com
-npm install
-```

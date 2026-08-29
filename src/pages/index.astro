@@ -15,21 +15,54 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		<main>
 			<h1>Networking &amp; Programming Notes</h1>
 			<p>
-				This site collects what I learn about networking and programming: protocols, lab
-				troubleshooting, automation scripts, and postmortems from real experiments.
-			</p>
-			<p>
-				Posts are written in Markdown. I try to capture what I did, why it mattered, and how to
-				verify the result — useful for my future self and for anyone reproducing the steps.
+				Personal notes on networking and programming — protocols, lab troubleshooting, automation,
+				and experiment write-ups.
 			</p>
 			<ul>
-				<li>Browse posts: <a href="/blog">Blog</a></li>
-				<li>About this site: <a href="/about">About</a></li>
-				<li>Add a post: create a <code>.md</code> file under <code>src/content/blog/</code></li>
+				<li><a href="/blog">Browse posts</a></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+
+			<h2>Add a new post</h2>
+			<ol>
+				<li>Create a Markdown file in <code>src/content/blog/</code> (example: <code>my-topic.md</code>).</li>
+				<li>
+					Add frontmatter at the top:
+					<pre><code>---
+title: 'Post title'
+description: 'One-line summary'
+pubDate: 'Aug 30 2026'
+tags: ['networking']
+---
+
+Write your content here.</code></pre>
+				</li>
+				<li>Preview locally: <code>npm run dev</code> → open <code>http://localhost:4321</code>.</li>
+				<li>Publish: <code>git add</code> → <code>git commit</code> → <code>git push</code> to <code>main</code>.</li>
+			</ol>
+			<p>The filename becomes the URL, e.g. <code>my-topic.md</code> → <code>/blog/my-topic/</code>.</p>
+
+			<h2>Turn the website on / off</h2>
+			<p>
+				GitHub Pages controls whether the site is public. Open
+				<a href="https://github.com/creisment999/creisment999.github.io/settings/pages" target="_blank" rel="noopener noreferrer"
+					>Settings → Pages</a
+				>:
+			</p>
+			<ul>
+				<li>
+					<strong>On:</strong> set Source to <strong>GitHub Actions</strong>. After a successful
+					<code>Deploy to GitHub Pages</code> run, the site is live at
+					<a href="https://creisment999.github.io">https://creisment999.github.io</a>.
+				</li>
+				<li>
+					<strong>Off:</strong> change Source away from GitHub Actions (or remove the Pages setup).
+					The public URL will stop serving your site.
+				</li>
 			</ul>
 			<p>
-				Built with the official <a href="https://astro.build/">Astro</a> blog template — minimal,
-				fast, and easy to maintain.
+				You can also unpublish from the same Pages settings page if GitHub shows an Unpublish
+				button.
 			</p>
 		</main>
 		<Footer />
